@@ -20,6 +20,16 @@ body {
   text-align: center;
 }
 
+#errors {
+  background-color: rgb(242,222,222);
+  border: 1px solid rgb(235,204,209);
+  border-radius: 4px;
+}
+#errors p {
+  color: rgb(169,68,66);
+  margin: 0.25em 0;
+}
+
 form > * {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
@@ -43,4 +53,8 @@ hr {
 
 noscript {
   color: red;
+}
+
+p {
+  margin: 1em 0;
 }
