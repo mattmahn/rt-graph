@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Retweet Grapher</title>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Retweet Grapher</h1>
+
+    <p>Have you ever wanted to visualize the network of retweeters for any given tweet? Well, now you can!</p>
+
+    <p>Simply get the tweet's ID and enter it into the textbox below. (A tweet's ID is the <code>819714525519872000</code> in <code>https://twitter.com/caseyliss/status/819714525519872000</code>.) We'll query Twitter's API to find everyone who retweeted the tweet, do some number crunching, and make a pretty graph for you.</p>
+
+    <div id="the-good-stuff">
+      <form onsubmit="return doSomething();">
+        <input id="tweet-id" type="number" placeholder="Tweet ID" min="0" autofocus required><br />
+        <label>
+          <input id="only-verified" type="checkbox" checked>
+          Only verified users?
+        </label><br />
+        <button type="submit">Graph!</button>
+      </form>
+
+      <div id="errors"></div>
+
+      <svg id="graph" width="800" height="600"></svg>
+
+      <noscript>
+        <p>Hahaha! You expect this to work without JavaScript‽ You're wrong. Everything uses JavaScript now.</p>
+      </noscript>
+    </div>
+
+    <p class="disclaimer">I don't attempt to support all browsers. If something is borked, I suggest getting a better browser. Sorry iOS&nbsp;9.3 denizens.</p>
+
+    <footer>
+      <hr>
+      <p>Made by <a href="https://github.com/mattmahn">mattmahn</a> after inspiration from a <a href="https://www.caseyliss.com/2017/1/14/that-escalated-quickly">blog post</a>. You can find the code <a href="https://github.com/mattmahn/rt-graph">here</a>.</p>
+    </footer>
+  </body>
+</html>
