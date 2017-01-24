@@ -1,0 +1,25 @@
+{
+  "name": "rt-graph",
+  "homepage": "https://github.com/mattmahn/rt-graph",
+  "authors": [
+    "Matthew Mahnke <mahnkem@msoe.edu>"
+  ],
+  "description": "Visualize the network of retweets for any given tweet",
+  "main": "index.html",
+  "keywords": [
+    "twitter",
+    "graphs"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton-framework": "^1.1.1"
+  }
+}

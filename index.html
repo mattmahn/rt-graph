@@ -1,47 +1,67 @@
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Retweet Grapher</title>
 
+    <link rel="icon" type="image/png" href="img/graph.png">
+    <link rel="apple-touch-icon" href="img/graph.png">
+    <link rel="mask-icon" href="img/graph.svg" color="black">
+
+    <link rel="stylesheet" type="text/css" href="bower_components/skeleton-framework/dist/skeleton.min.css">
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
   </head>
   <body>
-    <h1>Retweet Grapher</h1>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+        <h1>Retweet Grapher</h1>
 
-    <p>Have you ever wanted to visualize the network of retweeters for any given tweet? Well, now you can!</p>
+          <p>Have you ever wanted to visualize the network of retweeters for any given tweet? Well, now you can!</p>
 
-    <p>Simply get the tweet's ID and enter it into the textbox below. (A tweet's ID is the <code>819714525519872000</code> in <code>https://twitter.com/caseyliss/status/819714525519872000</code>.) We'll query Twitter's API to find everyone who retweeted the tweet, do some number crunching, and make a pretty graph for you.</p>
+          <p>Simply get the tweet's ID and enter it into the textbox below. (A tweet's ID is the 819714525519872000 in https://twitter.com/caseyliss/status/819714525519872000.) We'll query Twitter's API to find everyone who retweeted the tweet, do some number crunching, and make a pretty graph for you.</p>
+        </div>
+      </div>
 
-    <div id="the-good-stuff">
-      <form onsubmit="return doSomething();">
-        <input id="tweet-id" type="number" placeholder="Tweet ID" min="0" autofocus required><br />
-        <label>
-          <input id="only-verified" type="checkbox" checked>
-          Only verified users?
-        </label><br />
-        <button type="submit">Graph!</button>
-      </form>
+      <div id="the-good-stuff">
+        <form onsubmit="return doSomething();">
+          <div class="row">
+            <div class="one-half column">
+              <label for="tweet-id">Tweet ID</label>
+              <input id="tweet-id" class="u-full-width" type="number" placeholder="819714525519872000" min="0" autofocus required>
+            </div>
 
-      <div id="errors" style="display:none;"></div>
+            <div class="one-half column">
+              <label for="only-verified">Only verified users?</label>
+              <input id="only-verified" type="checkbox" checked>
+            </div>
 
-      <svg id="graph" width="800" height="600"></svg>
+          </div>
+            <div class="twelve columns">
+              <input class="button-primary" type="submit" value="Graph!">
+            </div>
+        </form>
 
-      <noscript>
-        <p>Hahaha! You expect this to work without JavaScript‽ You're wrong. Everything uses JavaScript now.</p>
-      </noscript>
+        <div id="errors" class="alert alert-error" style="display:none;"></div>
+
+        <svg id="graph" width="800" height="600"></svg>
+
+        <noscript>
+          <p>Hahaha! You expect this to work without JavaScript‽ You're wrong. Everything uses JavaScript now.</p>
+        </noscript>
+      </div>
+
+      <p class="disclaimer">I don't attempt to support all browsers. If something is borked, I suggest getting a better browser. Sorry iOS&nbsp;9.3 denizens.</p>
+
+      <footer>
+        <hr>
+        <p>Made by <a href="https://github.com/mattmahn">mattmahn</a> after inspiration from a <a href="https://www.caseyliss.com/2017/1/14/that-escalated-quickly">blog post</a>. You can find the code <a href="https://github.com/mattmahn/rt-graph">here</a>. Favicon by <a href="https://thenounproject.com/term/atom/520721">ProSymbols</a> from the Noun Project.</p>
+      </footer>
     </div>
-
-    <p class="disclaimer">I don't attempt to support all browsers. If something is borked, I suggest getting a better browser. Sorry iOS&nbsp;9.3 denizens.</p>
-
-    <footer>
-      <hr>
-      <p>Made by <a href="https://github.com/mattmahn">mattmahn</a> after inspiration from a <a href="https://www.caseyliss.com/2017/1/14/that-escalated-quickly">blog post</a>. You can find the code <a href="https://github.com/mattmahn/rt-graph">here</a>.</p>
-    </footer>
   </body>
 </html>
