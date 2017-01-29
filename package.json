@@ -1,0 +1,20 @@
+{
+  "name": "rt-graph",
+  "version": "0.0.0",
+  "description": "Visualize the network of retweeters for any given tweet",
+  "main": "server.js",
+  "repository": "git@github.com:mattmahn/rt-graph.git",
+  "author": "Matthew Mahnke <mahnkem@msoe.edu>",
+  "license": "MIT",
+  "engines": {
+    "node": "6.9.4"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "twitter": "^1.7.0"
+  }
+}

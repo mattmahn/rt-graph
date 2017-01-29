@@ -16,6 +16,24 @@ way to browse the retweeters of his [tweet][]. So I decided to make that.
 1. Be amazed
 
 
+## Development
+
+### Dependencies
+
+- Node ≥6
+- Yarn
+
+
+### Getting Started
+
+```sh
+git clone git@github.com:mattmahn/rt-graph
+cd rt-graph
+yarn install
+yarn run start
+```
+
+
 ## TODO
 
 - Everything.
