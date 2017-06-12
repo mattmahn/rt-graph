@@ -20,7 +20,7 @@ way to browse the retweeters of his [tweet][]. So I decided to make that.
 
 ### Dependencies
 
-- Node ≥6
+- Node ≥8
 - Yarn
 
 
@@ -45,10 +45,7 @@ yarn run start
 
 MIT, see LICENSE.
 
-I'm using the [Skeleton Framework][skeleton] released under the MIT license.
-
 
 [casey]: https://github.com/cliss
 [blog]: https://www.caseyliss.com/2017/1/14/that-escalated-quickly
-[skeleton]: https://skeleton-framework.github.io
 [tweet]: https://twitter.com/caseyliss/status/819714525519872000

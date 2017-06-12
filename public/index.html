@@ -10,57 +10,67 @@
     <link rel="apple-touch-icon" href="images/graph.png">
     <link rel="mask-icon" href="img/graph.svg" color="black">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
     <script src="js/script.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
+    <div class="pure-g">
+      <div class="pure-u">
         <h1>Retweet Grapher</h1>
 
-          <p>Have you ever wanted to visualize the network of retweeters for any given tweet? Well, now you can!</p>
+        <p>
+          Have you ever wanted to visualize the network of retweeters for any given tweet? Well, now you can!
+        </p>
 
-          <p>Simply get the tweet's ID and enter it into the textbox below. (A tweet's ID is the 819714525519872000 in https://twitter.com/caseyliss/status/819714525519872000.) We'll query Twitter's API to find everyone who retweeted the tweet, do some number crunching, and make a pretty graph for you.</p>
-        </div>
+        <p>
+          Simply get the tweet's ID and enter it into the textbox below.
+          (A tweet's ID is the 819714525519872000 in https://twitter.com/caseyliss/status/819714525519872000.)
+          We'll query Twitter's API to find everyone who retweeted the tweet, do some number crunching, and make a pretty graph for you.
+        </p>
       </div>
 
-      <div id="the-good-stuff">
-        <form onsubmit="return doSomething();">
-          <div class="row">
-            <div class="one-half column">
-              <label for="tweet-id">Tweet ID</label>
-              <input id="tweet-id" class="u-full-width" type="number" placeholder="819714525519872000" min="0" autofocus required>
-            </div>
+      <div id="the-good-stuff" class="pure-u">
+        <form class="pure-form pure-form-stacked" onsubmit="return doSomething();">
+          <fieldset>
+            <label for="tweet-id">Tweet ID</label>
+            <input id="tweet-id" type="number" placeholder="819714525519872000" min="0" autofocus required>
+            <span class="pure-form-message">This is a required field.</span>
 
-            <div class="one-half column">
-              <label for="only-verified">Only verified users?</label>
-              <input id="only-verified" type="checkbox" checked>
-            </div>
+            <label for="only-verified" class="pure-checkbox">
+              <input id="only-verified" type="checkbox"> Only verified users?</input>
+            </label>
 
-          </div>
-          <div class="twelve columns">
-            <input class="button-primary" type="submit" value="Graph!">
-          </div>
+            <button type="submit" class="pure-button pure-button-primary">Graph</button>
+          </fieldset>
         </form>
 
-        <div id="errors" class="alert alert-error" style="display:none;"></div>
+        <div id="errors" class="alert" style="display:none;"></div>
 
         <svg id="graph" width="800" height="600"></svg>
 
         <noscript>
-          <p>Hahaha! You expect this to work without JavaScript‽ You're wrong. Everything uses JavaScript now.</p>
+          <p>
+            You're going to need Javascript for this to work.
+          </p>
         </noscript>
       </div>
 
-      <p class="disclaimer">I don't attempt to support all browsers. If something is borked, I suggest getting a better browser. Sorry iOS&nbsp;9.3 denizens.</p>
+      <p class="pure-u disclaimer">
+        I don't attempt to support all browsers.
+        If something is borked, I suggest getting a better browser.
+      </p>
 
-      <footer>
-        <hr>
-        <p>Made by <a href="https://github.com/mattmahn">mattmahn</a> after inspiration from a <a href="https://www.caseyliss.com/2017/1/14/that-escalated-quickly">blog post</a>. You can find the code <a href="https://github.com/mattmahn/rt-graph">here</a>. Favicon by <a href="https://thenounproject.com/term/atom/520721">ProSymbols</a> from the Noun Project.</p>
+      <hr style="width:100%;">
+
+      <footer class="pure-u">
+        <p>
+          Made by <a href="https://github.com/mattmahn">mattmahn</a> after inspiration from a <a href="https://www.caseyliss.com/2017/1/14/that-escalated-quickly">blog post</a>.
+          You can find the code <a href="https://github.com/mattmahn/rt-graph">here</a>.
+          Favicon by <a href="https://thenounproject.com/term/atom/520721">ProSymbols</a> from the Noun Project.
+        </p>
       </footer>
     </div>
   </body>

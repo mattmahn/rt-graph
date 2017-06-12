@@ -7,14 +7,15 @@
   "author": "Matthew Mahnke <mahnkem@msoe.edu>",
   "license": "MIT",
   "engines": {
-    "node": "6.9.4"
+    "node": "8.0.0"
   },
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "body-parser": "^1.16.0",
-    "express": "^4.14.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "stylus": "^0.54.5",
     "twitter": "^1.7.0"
   }
 }
