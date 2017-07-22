@@ -1,21 +1,32 @@
 {
-  "name": "rt-graph",
-  "version": "0.0.0",
-  "description": "Visualize the network of retweeters for any given tweet",
-  "main": "server.js",
-  "repository": "git@github.com:mattmahn/rt-graph.git",
-  "author": "Matthew Mahnke <mahnkem@msoe.edu>",
-  "license": "MIT",
-  "engines": {
-    "node": "8.0.0"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "stylus": "^0.54.5",
-    "twitter": "^1.7.0"
-  }
+    "name": "rt-graph",
+    "version": "0.0.0",
+    "description": "Visualize the network of retweeters for any given tweet",
+    "main": "server.js",
+    "repository": "git@github.com:mattmahn/rt-graph.git",
+    "author": "Matthew Mahnke <mahnkem@msoe.edu>",
+    "license": "MIT",
+    "engines": {
+        "node": "^8.1.4"
+    },
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.17.2",
+        "config": "^1.26.1",
+        "express": "^4.15.3",
+        "helmet": "^3.8.1",
+        "morgan": "^1.8.2",
+        "request": "^2.81.0",
+        "serve-static": "^1.12.4",
+        "stylus": "^0.54.5",
+        "toml": "^2.3.2",
+        "twitter": "^1.7.1",
+        "ws": "^3.1.0"
+    },
+    "optionalDependencies": {
+        "bufferutil": "^3.0.2",
+        "utf-8-validate": "^3.0.3"
+    }
 }

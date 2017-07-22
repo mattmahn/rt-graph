@@ -16,7 +16,7 @@ way to browse the retweeters of his [tweet][]. So I decided to make that.
 1. Be amazed
 
 
-## Development
+## Development / Deployment
 
 ### Dependencies
 
@@ -26,19 +26,30 @@ way to browse the retweeters of his [tweet][]. So I decided to make that.
 
 ### Getting Started
 
-```sh
-git clone git@github.com:mattmahn/rt-graph
-cd rt-graph
-yarn install
-yarn run start
-```
+1. Fetch the application:
+   ```sh
+   git clone git@github.com:mattmahn/rt-graph
+   cd rt-graph
+   yarn install
+   ```
+1. [Create a new Twitter app](https://apps.twitter.com).
+1. Set the consumer key & secret either in `config/local.toml` or as the
+   `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET` environment variables.
+1. Get your app's bearer token by running `scripts/fetch_bearer_token.js` and
+   set it like above.
+1. Start the application: `yarn start`
 
 
 ## TODO
 
-- Everything.
-- Only show verified users
-- Make sure styling is still pretty
+- [ ] Everything.
+- [ ] Make sure styling is still pretty
+- [ ] Option to only show verified users
+- [ ] Open tweet in new tab when clicking on node
+- [ ] Show additional meta information about [re]tweets when hovering over
+  nodes
+- [ ] [Security best practices](http://expressjs.com/en/advanced/best-practice-security.html)
+- [ ] [Performance best practices](http://expressjs.com/en/advanced/best-practice-performance.html)
 
 
 ## License

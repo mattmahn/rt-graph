@@ -1,0 +1,8 @@
+[server]
+host = "127.0.0.1"
+port = 3000
+
+[twitter]
+bearer_token = "FIXME! You can run `./scripts/fetch_bearer_token.js`"
+consumer_key = "FIXME"
+consumer_secret = "FIXME"
