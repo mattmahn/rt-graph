@@ -5,6 +5,9 @@ Visualize the network of retweeters for any given tweet.
 I made this because [Casey Liss][casey] [mentioned][blog] that he wanted some
 way to browse the retweeters of his [tweet][]. So I decided to make that.
 
+***Turns out Twitter doesn't make the required information available through
+their API, so this is dead in the water.***
+
 
 ## Usage
 
